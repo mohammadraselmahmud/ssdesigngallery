@@ -1,0 +1,7 @@
+{
+  "name": "SS Design Studio Landing Page",
+  "description": "A high-end, modern landing page for a stainless steel design workshop featuring an interactive AI design consultant, a project gallery, and app download integration.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
