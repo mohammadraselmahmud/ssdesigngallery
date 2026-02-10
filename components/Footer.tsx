@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-50 pt-20 pb-10 border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1 md:col-span-1">
             <div className="flex items-center space-x-2 mb-6">
               <img src={logo} alt="ss design gallery logo" className="w-10 h-10 bg-slate-900 rounded-lg" />
@@ -53,27 +53,26 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* <div>
+          <div>
             <h4 className="text-slate-900 font-bold mb-6 uppercase text-sm tracking-wider">Company</h4>
             <ul className="space-y-4 text-gray-500">
-              <li><a href="#" className="hover:text-slate-900 transition-colors">About Us</a></li>
-              <li><a href="#" className="hover:text-slate-900 transition-colors">Factory Visit</a></li>
-              <li><a href="#" className="hover:text-slate-900 transition-colors">Refer & Earn</a></li>
-              <li><a href="#" className="hover:text-slate-900 transition-colors">Contact</a></li>
+              <li><Link to="/about" className="hover:text-slate-900 transition-colors">About Us</Link></li>
+              <li><Link to="/contact" className="hover:text-slate-900 transition-colors">Contact Us</Link></li>
+              <li><Link to="/terms" className="hover:text-slate-900 transition-colors">Terms of Service</Link></li>
+              <li><Link to="/privacy" className="hover:text-slate-900 transition-colors">Privacy Policy</Link></li>
+              <li><Link to="/data-deletion" className="hover:text-slate-900 transition-colors">Data Deletion</Link></li> 
             </ul>
-          </div> */}
+          </div>
 
           <div>
             <h4 className="text-slate-900 font-bold mb-6 uppercase text-sm tracking-wider">Support</h4>
             <ul className="space-y-4 text-gray-500">
+            
               <li className="flex items-start space-x-3 text-sm">
-                <span>Dhaka Office: Plot 12, Sector 10, Uttara</span>
+                <span>Email: ssdesigngallery@gmail.com</span>
               </li>
               <li className="flex items-start space-x-3 text-sm">
-                <span>Phone: +880 1234 567890</span>
-              </li>
-              <li className="flex items-start space-x-3 text-sm font-bold text-slate-700">
-                <span>Open: Sat - Thu (9am - 7pm)</span>
+                <span>WhatsApp: 01631254639</span>
               </li>
             </ul>
           </div>
@@ -82,13 +81,12 @@ const Footer: React.FC = () => {
         <div className="pt-10 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
           <p>© 2026 SS Design Gallery. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link to="/privacy-policy" className="hover:text-slate-900">Privacy Policy</Link>
-            <Link to="/terms-and-conditions" className="hover:text-slate-900">Terms & Conditions</Link>
-            <Link to="/about-us" className="hover:text-slate-900">About Us</Link>
+             <Link to="/privacy" className="hover:text-slate-900">Privacy</Link>
           </div>
         </div>
       </div>
     </footer>
+    
   );
 };
 

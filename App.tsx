@@ -11,6 +11,8 @@ import AIConsultant from './components/AIConsultant';
 import AboutUs from './components/AboutUs';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsAndConditions from './components/TermsAndConditions';
+import ContactUs from './components/Contactus';
+import DataDeletion from './components/DataDeletion';
 
 const App: React.FC = () => {
   return (
@@ -27,24 +29,12 @@ const App: React.FC = () => {
                 <DownloadCTA />
               </>
             } />
-          <Route path="/about-us" element={
-            <>
-            <AboutUs />
-            </>
-          } />
-          <Route path="/privacy-policy" element={
-            <>
-            <PrivacyPolicy />
-            </>
-          } />
-          <Route path="/terms-and-conditions" element={
-            <>
-            <TermsAndConditions />
-            </>
-          } />
-          </Routes>
-
-           
+          <Route path="/about" element={<AboutUs />} />
+            <Route path="/terms" element={<TermsAndConditions />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
+            <Route path="/contact" element={<ContactUs />} />
+            <Route path="/data-deletion" element={<DataDeletion />} />
+          </Routes> 
         </main>
         <Footer />
         {/* <AIConsultant /> */}
