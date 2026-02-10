@@ -2,62 +2,82 @@
 import React from 'react';
 
 const PrivacyPolicy: React.FC = () => {
-  const dataPoints = [
-    { label: "Phone Number", status: "Not Collected", icon: <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" /></svg>, color: "text-red-500" },
-    { label: "Payment Info", status: "Not Collected", icon: <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" /></svg>, color: "text-red-500" },
-    { label: "Device Info", status: "Collected (Optimizations)", icon: <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>, color: "text-green-500" },
-    { label: "Design Preferences", status: "Collected (User Experience)", icon: <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>, color: "text-green-500" }
-  ];
-
   return (
-    <div className="pt-32 pb-24 bg-white min-h-screen">
+    <div className="pt-32 pb-24 bg-gray-50 min-h-screen">
       <div className="max-w-4xl mx-auto px-4">
-        <div className="mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4 font-outfit">Privacy is Core</h1>
-          <p className="text-lg text-slate-600">Transparent data practices for a worry-free inspiration experience.</p>
-        </div>
+        <div className="bg-white rounded-[2.5rem] shadow-xl border border-slate-100 overflow-hidden">
+          {/* Header */}
+          <div className="bg-slate-900 p-12 text-center">
+            <h1 className="text-4xl font-bold text-white mb-4 font-outfit">Privacy Policy</h1>
+            <p className="text-slate-400">Effective as of July 28, 2025</p>
+          </div>
 
-        {/* Visual Data Tracker */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
-          {dataPoints.map((dp, i) => (
-            <div key={i} className="bg-slate-50 p-6 rounded-2xl border border-slate-100 text-center">
-              <div className={`${dp.color} flex justify-center mb-3`}>{dp.icon}</div>
-              <div className="font-bold text-slate-900 text-sm mb-1">{dp.label}</div>
-              <div className="text-[10px] text-slate-400 font-medium uppercase tracking-tighter">{dp.status}</div>
-            </div>
-          ))}
-        </div>
-
-        <div className="prose prose-lg max-w-none text-gray-600 space-y-12">
-          <section>
-            <h2 className="text-2xl font-bold text-slate-900 mb-6 font-outfit">Camera and AR Usage</h2>
-            <div className="bg-slate-900 text-slate-300 p-8 rounded-[2rem] border-l-8 border-blue-500">
-              <p className="mb-0">
-                Our application requests camera access exclusively for the <strong>Augmented Reality (AR) Preview</strong> tool. 
-                All image processing happens locally on your device's memory. We do <strong>not</strong> record, save, or transmit your camera feed or images of your home to our servers.
+          <div className="p-8 md:p-16 space-y-12">
+            {/* Salutation & Security */}
+            <section className="bg-blue-50/50 p-8 rounded-3xl border border-blue-100">
+              <h2 className="text-2xl font-bold text-slate-900 mb-4 font-outfit">Assalam walekum,</h2>
+              <p className="text-slate-700 leading-relaxed text-lg">
+                We value the trust you place in us when providing your personal information, and we strive to use commercially acceptable means to protect it. However, please remember that no method of transmission over the internet or method of electronic storage is 100% secure and reliable, and we cannot guarantee its absolute security.
               </p>
-            </div>
-          </section>
+            </section>
 
-          <section className="grid md:grid-cols-2 gap-12">
-            <div>
-              <h2 className="text-2xl font-bold text-slate-900 mb-6 font-outfit">How we use data</h2>
-              <p>We analyze which design categories are most popular (e.g., 'Modern Gates' vs 'Interior Railings') to prioritize new uploads for our gallery. This is done using anonymous device IDs that cannot identify you personally.</p>
-            </div>
-            <div>
-              <h2 className="text-2xl font-bold text-slate-900 mb-6 font-outfit">Zero Sales Policy</h2>
-              <p>We are not an advertising network. Your design interests are never sold to insurance companies, real estate agents, or third-party marketing firms.</p>
-            </div>
-          </section>
+            {/* Device Permissions */}
+            <section>
+              <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                <svg className="w-6 h-6 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+                Device Permissions We Require
+              </h3>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:border-slate-300 transition-colors">
+                  <div className="font-bold text-slate-900 mb-2">Network Access</div>
+                  <p className="text-sm text-slate-600">To detect network environment and support online features.</p>
+                </div>
+                <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:border-slate-300 transition-colors">
+                  <div className="font-bold text-slate-900 mb-2">Notification Access</div>
+                  <p className="text-sm text-slate-600">To receive phone notification content on apps.</p>
+                </div>
+                <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100 hover:border-slate-300 transition-colors">
+                  <div className="font-bold text-slate-900 mb-2">Storage</div>
+                  <p className="text-sm text-slate-600">Write, read, and manage external storage for picture download or upload.</p>
+                </div>
+              </div>
+            </section>
 
-          <section className="border-t border-slate-100 pt-12">
-            <h2 className="text-2xl font-bold text-slate-900 mb-6 font-outfit">Data Security</h2>
-            <p>Your saved 'Favorite' designs are stored securely within the app's local database. Should you choose to delete the app, all locally cached data and preferences are permanently erased.</p>
-          </section>
-        </div>
+            {/* Advertising */}
+            <section className="border-t pt-12">
+              <h3 className="text-xl font-bold text-slate-900 mb-4 font-outfit">Advertising</h3>
+              <div className="flex flex-col md:flex-row gap-6 items-start">
+                <div className="bg-slate-100 px-6 py-4 rounded-xl font-bold text-slate-700">AdMob</div>
+                <div className="bg-slate-100 px-6 py-4 rounded-xl font-bold text-slate-700">Meta Audience Network</div>
+              </div>
+              <p className="mt-4 text-slate-600 italic">
+                Personal Data: Trackers; unique device identifiers for advertising (e.g., Google Advertiser ID or IDFA); Usage Data.
+              </p>
+            </section>
 
-        <div className="mt-20 p-8 bg-slate-50 rounded-[2rem] text-center">
-          <p className="text-slate-500 text-sm">Have specific privacy questions? Reach out at <span className="font-bold text-slate-900 underline">privacy@ssdesigngallery.com</span></p>
+            {/* Links to Other Sites */}
+            <section className="border-t pt-12">
+              <h3 className="text-xl font-bold text-slate-900 mb-4 font-outfit">Links to Other Sites</h3>
+              <p className="text-slate-600 leading-relaxed">
+                This service may contain links to advertisements or other sites. If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by us. Therefore, we strongly advise you to review the Privacy Policy of these websites. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.
+              </p>
+            </section>
+
+            {/* Changes */}
+            <section className="border-t pt-12">
+              <h3 className="text-xl font-bold text-slate-900 mb-4 font-outfit">Changes to This Privacy Policy</h3>
+              <p className="text-slate-600 leading-relaxed">
+                We may update our Privacy Policy from time to time. Therefore, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page.
+              </p>
+            </section>
+
+            {/* Contact Us */}
+            <section className="bg-slate-900 p-8 rounded-3xl text-center text-white">
+              <h3 className="text-xl font-bold mb-4 font-outfit">Contact Us</h3>
+              <p className="mb-4">If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at:</p>
+              <a href="mailto:ssdesigngallery@gmail.com" className="text-blue-400 font-bold text-xl hover:underline">ssdesigngallery@gmail.com</a>
+            </section>
+          </div>
         </div>
       </div>
     </div>
